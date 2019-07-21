@@ -1,0 +1,109 @@
+@media (max-width: 780px) {
+
+    .header {
+        
+        height: 70px;
+        &-links {
+            display: none;
+        }
+    }
+
+    .menu-button {
+        cursor: pointer;
+        z-index: 3;
+        width: 30px;
+        margin-left: auto;
+        margin-right: 15px;
+        height: 30px;
+    }
+
+
+    .menu-ico {
+        height: 2px;
+        width: 100%;
+        position: relative;
+        background-color: #fff;
+        display: block;
+        top: auto;
+        transition: all 0.3s;
+        transform: translateY(10px);
+
+        &:after,
+        &:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #fff;
+            transition: all 0.3s;
+        }
+
+        &:after {
+            top: -6px
+        }
+
+        &:before {
+            bottom: -6px
+        }
+
+    }
+
+    #menuButton {
+        display: none;
+
+        &:checked ~ {
+            .menu-button {
+                
+
+                .menu-ico {
+                    height: 0;
+                    
+                    &:after {
+                        transform: rotate(45deg);
+                        top: -1px;
+                        top: -1px;
+                    }
+
+                    &:before {
+                        transform: rotate(-45deg);
+                        bottom: -1px;
+                    }
+
+                }
+            }
+
+
+            .header-links {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 70px;
+                right: 0;
+                width: 100%;
+                background-color: $white;
+                color: $red;
+                .nav {
+                    display: flex;
+                    flex-direction: column;
+                    
+                    &-link {
+                        color: $red;
+                        border-bottom: 1px solid $red;
+                    }
+                }
+                
+            }
+            
+        }
+    }
+
+    .page {
+        &-main {
+            &-button {
+                flex-wrap: wrap;
+            }
+        }
+    }
+
+}
