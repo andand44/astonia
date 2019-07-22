@@ -237,6 +237,9 @@ h1,
     ul {
         list-style-type: none;
         display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
         li {
             padding: 15px;
         }

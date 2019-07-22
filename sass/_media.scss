@@ -1,3 +1,7 @@
+@media (max-width: 1024px) {
+    
+}
+
 @media (max-width: 780px) {
 
     .header {
@@ -85,9 +89,12 @@
                 color: $red;
                 .nav {
                     display: flex;
-                    flex-direction: column;
                     
-                    &-link {
+                    ul {
+                        flex-direction: column;
+                    }
+                    
+                    li {
                         color: $red;
                         border-bottom: 1px solid $red;
                     }
