@@ -302,6 +302,14 @@ h1,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .nav ul li {
@@ -410,12 +418,14 @@ h1,
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+  #menuButton:checked ~ .header-links .nav ul {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  #menuButton:checked ~ .header-links .nav-link {
+  #menuButton:checked ~ .header-links .nav li {
     color: #d32721;
     border-bottom: 1px solid #d32721;
   }
